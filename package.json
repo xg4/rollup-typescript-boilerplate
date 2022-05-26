@@ -19,11 +19,13 @@
   "license": "MIT",
   "author": "xg4 <xingor4@gmail.com>",
   "type": "module",
-  "exports": "./dist/index.esm.js",
+  "exports": "./dist/index.es.js",
   "browser": "./dist/index.umd.js",
   "types": "dist/types",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "rimraf dist && npm run build:types && npm run build:js",
