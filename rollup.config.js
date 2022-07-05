@@ -15,11 +15,15 @@ export default {
   ],
   output: [
     {
-      file: pkg.exports,
+      file: pkg.exports['.'].import,
       format: 'esm',
     },
     {
-      name: 'Boilerplate',
+      file: pkg.main,
+      format: 'cjs',
+    },
+    {
+      name: pkg.name,
       file: pkg.browser,
       format: 'umd',
     },

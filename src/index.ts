@@ -1,10 +1,15 @@
-export default function boilerplate() {
-  return 'Boilerplate'
+export default function hello() {
+  return 'hello world'
 }
 
-export class Boilerplate2 {
+export class Hello {
   name: string
+
   constructor() {
-    this.name = 'Boilerplate'
+    this.name = 'hello'
+  }
+
+  say() {
+    return 'hello world'
   }
 }
