@@ -1,5 +1,7 @@
+import { upperCase } from 'lodash'
+
 export default function hello() {
-  return 'hello world'
+  return upperCase('hello world')
 }
 
 export class Hello {
@@ -10,6 +12,6 @@ export class Hello {
   }
 
   say() {
-    return 'hello world'
+    return upperCase('hello world')
   }
 }

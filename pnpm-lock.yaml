@@ -16,14 +16,19 @@ specifiers:
   '@semantic-release/github': 8.0.4
   '@semantic-release/npm': 9.0.1
   '@semantic-release/release-notes-generator': 10.0.3
+  '@types/lodash': 4.14.182
   husky: ^8.0.0
   lint-staged: ^12.4.2
+  lodash: 4.17.21
   prettier: ^2.6.2
   rimraf: ^3.0.2
   rollup: ^2.74.1
   rollup-plugin-terser: ^7.0.2
   semantic-release: 19.0.3
   typescript: ^4.7.2
+
+dependencies:
+  lodash: 4.17.21
 
 devDependencies:
   '@babel/core': 7.18.2
@@ -41,6 +46,7 @@ devDependencies:
   '@semantic-release/github': 8.0.4_semantic-release@19.0.3
   '@semantic-release/npm': 9.0.1_semantic-release@19.0.3
   '@semantic-release/release-notes-generator': 10.0.3_semantic-release@19.0.3
+  '@types/lodash': 4.14.182
   husky: 8.0.1
   lint-staged: 12.4.2
   prettier: 2.6.2
@@ -1803,6 +1809,10 @@ packages:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
     dev: true
 
+  /@types/lodash/4.14.182:
+    resolution: {integrity: sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==}
+    dev: true
+
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
@@ -3141,7 +3151,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-update/4.0.0:
     resolution: {integrity: sha512-9fkkDevMefjg0mmzWFBW8YkFP91OrizzkW3diF7CpG+S2EYdy4+TVfGwz1zeF8x7hCx1ovSPTOE9Ngib74qqUg==}

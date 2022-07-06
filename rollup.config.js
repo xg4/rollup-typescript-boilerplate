@@ -7,34 +7,44 @@ import pkg from './package.json'
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx']
 
-export default {
-  input: 'src/index.ts',
-  external: [
-    ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.peerDependencies || {}),
-  ],
-  output: [
-    {
-      file: pkg.exports['.'].import,
-      format: 'esm',
-    },
-    {
-      file: pkg.main,
-      format: 'cjs',
-    },
-    {
-      name: pkg.name,
-      file: pkg.browser,
-      format: 'umd',
-    },
-  ],
-  plugins: [
-    json(),
-    nodeResolve({ extensions }),
-    commonjs(),
-    babel({
-      extensions,
-    }),
-    terser(),
-  ],
-}
+const plugins = [
+  json(),
+  nodeResolve({ extensions }),
+  commonjs(),
+  babel({
+    extensions,
+  }),
+  terser(),
+]
+
+export default [
+  {
+    input: 'src/index.ts',
+    external: [
+      Object.keys(pkg.dependencies || {}),
+      Object.keys(pkg.peerDependencies || {}),
+    ].flat(),
+    output: [
+      {
+        file: pkg.exports['.'].import,
+        format: 'esm',
+      },
+      {
+        file: pkg.exports['.'].require,
+        format: 'cjs',
+      },
+    ],
+    plugins,
+  },
+  {
+    input: 'src/index.ts',
+    output: [
+      {
+        name: pkg.name,
+        file: pkg.browser,
+        format: 'umd',
+      },
+    ],
+    plugins,
+  },
+]
