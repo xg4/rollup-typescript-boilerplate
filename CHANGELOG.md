@@ -1,3 +1,9 @@
+## [0.2.1](https://github.com/xg4/rollup-typescript-boilerplate/compare/v0.2.0...v0.2.1) (2022-07-18)
+
+### Bug Fixes
+
+- module fallback ([46e932e](https://github.com/xg4/rollup-typescript-boilerplate/commit/46e932efdd86b4c19eb98a9766ca582cb9660205))
+
 # [0.2.0](https://github.com/xg4/rollup-typescript-boilerplate/compare/v0.1.0...v0.2.0) (2022-07-06)
 
 ### Features
