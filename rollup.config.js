@@ -26,11 +26,11 @@ export default [
     ].flat(),
     output: [
       {
-        file: pkg.exports['.'].import,
+        file: pkg.module,
         format: 'esm',
       },
       {
-        file: pkg.exports['.'].require,
+        file: pkg.main,
         format: 'cjs',
       },
     ],

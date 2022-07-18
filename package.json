@@ -18,15 +18,15 @@
   },
   "license": "MIT",
   "author": "xg4 <xingor4@gmail.com>",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/types",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "browser": "./dist/index.umd.js",
   "types": "./dist/types",
   "files": [
